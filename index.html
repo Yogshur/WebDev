@@ -2,13 +2,46 @@
     <head>
         <meta charset="utf-8">
         <title>Speakify</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1>Speakify</h1>
         <textarea id="mainBox" name="mainBox" rows="4" cols="50" placeholder="Enter your text here"></textarea>
-        </br>
+
+        <br>
         <input type="radio" name="mainSelector" value="1" checked>Text to Speech
         <input type="radio" name="mainSelector" value="2">Speech to text
+
+        <br>
+        <label for="Language">Language Selector</label>
+        <select name="Language" id="Language">
+            <option value="English">English</option>
+            <option value="Spanish">Spanish</option>
+            <option value="French">French</option>
+        </select>
+
+        <br>
+        <label for="Voice">Voice Selector</label>
+        <select name="Voice" id="Voice">
+            <option value="Voice1">Voice1</option>
+            <option value="Voice2">Voice2</option>
+            <option value="Voice3">Voice3</option>
+        </select>
+        
+        <br>
+        <label for="SpeechRate">Playback Speed</label>
+        <input type="range" id="SpeechRate" name="SpeechRate" min="0" max="2" step=".2" value="1">
+
+        <br>
+        <label for="Volume">Volume</label>
+        <input type="range" id="Volume" name="SpeechRate" min="0" max="100" step="1" value="50">
+
+        <br>
+        <input type="button" id="Speak" value="Speakify">
+        <input type="button" id="Reverse" value="Reverse Order">
+        <input type="button" id="Reset" value="Reset">
+
+
 
     </body>
 
