@@ -1,1 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-image: url("file:///Users/Copeland/Library/CloudStorage/OneDrive-WentworthInstituteofTechnology/School/Senior%20Year/Spring%202022/Web%20Development/Final%20Project/web_dev_final_Jake_and_Copeland/img/diego-ph-5LOhydOtTKU-unsplash.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+}
 
+html {
+    position: absolute;
+    height: 100%;
+}
+
+header {
+    
+}
