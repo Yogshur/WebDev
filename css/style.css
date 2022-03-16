@@ -6,18 +6,23 @@ body {
 }
 
 html {
-    height: 100%;
+    font-size: 100%;
 }
 
 .container {
-    max-width: 50%;
-    margin: 0 auto;
+    height: 100%;
+    width: 75%;
+    border: 10px solid black;
+    background-color: purple;
+    margin-left: 13%;
+    margin-right: 13%;
 }
 
 header  {
     text-align: center;
+    color: #f26135;
 }
 
-#mainBox {
-    text-align: center;
+#mainBox, .selecters, .slidebars, .actions {
+    margin-left: 40%;
 }
