@@ -5,17 +5,9 @@ body {
     background-repeat: no-repeat;
 }
 
-html {
-    font-size: 100%;
-}
-
 .container {
-    height: 100%;
-    width: 75%;
-    border: 10px solid black;
-    background-color: purple;
-    margin-left: 13%;
-    margin-right: 13%;
+max-width: 840px;
+margin: 0 auto;
 }
 
 header  {
@@ -23,6 +15,45 @@ header  {
     color: #f26135;
 }
 
-#mainBox, .selecters, .slidebars, .actions {
-    margin-left: 40%;
+.userInput{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: #f26135;
+    padding: 15px;
+
+}
+
+.actions {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    
+}
+
+.s-Label {
+    margin-top: 25%;
+    margin-bottom: 25%;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+#Speak, #Reverse, #Reset {
+    margin: 10px;
+    color: #f26135;
+    background-color: black;
+}
+
+
+#Voice, #Language {
+    margin-top: 25%;
+    margin-bottom: 25%;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+}
+
+.selecter {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
 }

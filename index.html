@@ -14,37 +14,52 @@
                 <input type="radio" name="mainSelector" value="2">Speech to text
             </header>
 
-            <textarea id="mainBox" name="mainBox" rows="4" cols="25" placeholder="Enter your text here"></textarea>
-    
-            <br><br>
-            <div class="selecters">
-                <label for="Language">Language Selector</label>
-                <select name="Language" id="Language">
-                    <option value="English">English</option>
-                    <option value="Spanish">Spanish</option>
-                    <option value="French">French</option>
-                </select>
-        
-                <br>
-                <label for="Voice">Voice Selector</label>
-                <select name="Voice" id="Voice">
-                    <option value="Voice1">Voice1</option>
-                    <option value="Voice2">Voice2</option>
-                    <option value="Voice3">Voice3</option>
-                </select>
-            </div>
-        
-            <div class="slidebars"> 
-                <label for="SpeechRate">Playback Speed</label>
-                <input type="range" id="SpeechRate" name="SpeechRate" min="0" max="2" step=".2" value="1">
-        
-                <br>
-                <label for="Volume">Volume</label>
-                <input type="range" id="Volume" name="SpeechRate" min="0" max="100" step="1" value="50">
-            </div>
-        
-        
+            <div class="userInput">
+                <textarea id="mainBox" name="mainBox" rows="25" cols="20" placeholder="Enter your text here"></textarea>
             
+                <div class="selecter">
+
+                    <div class="s-Label">
+                        <label for="Language">Language Selector:</label>
+                    </div>
+
+                    <select name="Language" id="Language">
+                        <option value="English">English</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="French">French</option>
+                    </select>
+                    
+
+
+                    <div class="s-Label">
+                        <label for="Voice">Voice Selector:</label>
+                    </div>
+
+                    <select name="Voice" id="Voice">
+                        <option value="Voice1">Voice1</option>
+                        <option value="Voice2">Voice2</option>
+                        <option value="Voice3">Voice3</option>
+                    </select>
+        
+                    
+
+                    <div class="s-Label">
+                        <label for="SpeechRate">Playback Speed:</label>
+                    </div>
+
+                    <input type="range" id="SpeechRate" name="SpeechRate" min="0" max="2" step=".2" value="1">
+                    
+                    
+                    
+                    <div class="s-Label">
+                        <label for="Volume">Volume:</label>
+                    </div>
+                    
+                    <input type="range" id="Volume" name="Volume" min="0" max="100" step="1" value="50">
+                </div>
+            
+            
+            </div>
             <div class="actions">
                 <input type="button" id="Speak" value="Speakify">
                 <input type="button" id="Reverse" value="Reverse Order">
