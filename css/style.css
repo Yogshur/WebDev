@@ -5,14 +5,60 @@ body {
     background-repeat: no-repeat;
 }
 
-.container {
-max-width: 840px;
-margin: 0 auto;
-}
-
 header  {
     text-align: center;
     color: #f26135;
+}
+
+header, .s-Label{
+    text-shadow: 4px 4px 2px rgba(0,0,0,0.8);
+}
+
+#Voice, #Language {
+    margin-top: 25%;
+    margin-bottom: 25%;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+}
+
+#Volume, #SpeechRate {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 7px;
+    outline: none;
+    border-radius: 3px;
+}
+
+#Volume::-webkit-slider-thumb, #SpeechRate::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+}
+
+#Speak, #Reverse, #Reset {
+    margin: 10px;
+    color: #f26135;
+    background-color: black;
+}
+
+#mainBox, #Speak, #Reverse, #Reset, #Language, #Voice {
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.BIG {
+    font-size: 100px;
+    margin-bottom: 10px;
+}
+
+.container {
+max-width: 840px;
+margin: 0 auto;
 }
 
 .userInput{
@@ -37,23 +83,43 @@ header  {
     font-size: 20px;
 }
 
-#Speak, #Reverse, #Reset {
-    margin: 10px;
-    color: #f26135;
-    background-color: black;
-}
 
-
-#Voice, #Language {
-    margin-top: 25%;
-    margin-bottom: 25%;
-    margin-left: 0px;
-    margin-right: 0px;
-    text-align: center;
-}
 
 .selecter {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 25% 25% 25% 25%;
+}
+
+@media (max-width: 480px){
+
+    #Voice, #Language {
+        margin-top: 25%;
+        margin-bottom: 25%;
+        margin-left: 0px;
+        margin-right: 0px;
+        text-align: center;
+    }
+
+    .BIG {
+        font-size: 70px;
+        margin-bottom: 10px;
+    }
+
+    .userInput{
+        display: grid;
+        grid-template-columns: 100%;
+        color: #f26135;
+        padding: 15px;
+    
+    }
+
+    .s-Label {
+        margin-left: 5px;
+        margin-right: 20px;
+        font-size: 30px;
+    }
+
+
+
 }
