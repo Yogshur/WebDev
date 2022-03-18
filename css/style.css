@@ -1,13 +1,14 @@
 body {
-    /*Copeland's Laptop
+    /*Copeland's Laptop*/
     background-image: url("file:///Users/Copeland/Library/CloudStorage/OneDrive-WentworthInstituteofTechnology/School/Senior%20Year/Spring%202022/Web%20Development/Final%20Project/web_dev_final_Jake_and_Copeland/img/diego-ph-5LOhydOtTKU-unsplash.jpg");
-    */
+    
     /*Copeland's Desktop
     background-image: url("D:/VS Code/Website for final/web_dev_final_Jake_and_Copeland/img/diego-ph-5LOhydOtTKU-unsplash.jpg");
     */
-    /*Jake's Desktop*/
+    /*Jake's Desktop
     background-image: url("C:/Users/Jake Watt/OneDrive/One Drive/OneDrive - Wentworth Institute of Technology/Documents/webdev/web_dev_final_Jake_and_Copeland/img/diego-ph-5LOhydOtTKU-unsplash.jpg");
-    
+    */
+
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
