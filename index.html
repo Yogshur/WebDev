@@ -46,7 +46,7 @@
 
                     <div class="sliderContainer">
                         <input type="range" id="SpeechRate" class="slider" name="SpeechRate" min="0" max="2" step=".5" value="1">
-                        <p class="speechRateValue">Value: <span id="value"></span></p>
+                        <p class="speechRateValue">Rate: <span id="valueSpeech"></span></p>
                     </div>
                     
                     
@@ -55,7 +55,10 @@
                         <label for="Volume">Volume:</label>
                     </div>
                     
-                    <input type="range" id="Volume" name="Volume" min="0" max="100" step="1" value="50">
+                    <div class="sliderContainer">
+                        <input type="range" id="Volume" class="slider" name="Volume" min="0" max="100" step="1" value="50">
+                        <p class="volumeLevelValue">Volume: <span id="valueVolume"></span></p>
+                    </div>
                 </div>
             
             
