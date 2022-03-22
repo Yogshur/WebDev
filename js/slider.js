@@ -23,9 +23,8 @@ sliderSpeech.addEventListener("mousemove", function() {
 
 });
 
-
 //Volume Slider
-var sliderVolume = document.getElementById("volume");
+var sliderVolume = document.getElementById("Volume");
 var sliderVolumeOutPut = document.getElementById("valueVolume");
 
 sliderVolumeOutPut.innerHTML = sliderVolume.value;
@@ -34,8 +33,8 @@ sliderVolume.oninput = function() {
     sliderVolumeOutPut.innerHTML = this.value;
 }
 
-sliderVolume.addEventListener("mouse", function() {
-    var xAxis = sliderVolume.value;
-    var color = 'linear-gradient(90deg, #f26135 ' + xAxis +'%, #000000 ' + xAxis + '%)';
+sliderVolume.addEventListener("mousemove", function() {
+    var xAxis2 = sliderVolume.value;
+    var color = 'linear-gradient(90deg, #f26135 ' + xAxis2 +'%, #000000 ' + xAxis2 + '%)';
     sliderVolume.style.background = color;
 });
