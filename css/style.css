@@ -1,6 +1,6 @@
 body {
     /*Copeland's Laptop*/
-    background-image: url("file:///Users/Copeland/Library/CloudStorage/OneDrive-WentworthInstituteofTechnology/School/Senior%20Year/Spring%202022/Web%20Development/Final%20Project/web_dev_final_Jake_and_Copeland/img/diego-ph-5LOhydOtTKU-unsplash.jpg");
+    background-image: url("/Users/Copeland/Documents/VS Code/Web Dev project/web_dev_final_Jake_and_Copeland/img/diego-ph-5LOhydOtTKU-unsplash.jpg");
     
     /*Copeland's Desktop
     background-image: url("D:/VS Code/Website for final/web_dev_final_Jake_and_Copeland/img/diego-ph-5LOhydOtTKU-unsplash.jpg");
@@ -112,6 +112,7 @@ header, .s-Label{
     border-radius: 30px;
     padding-top: 12px;
     padding-left: 15px;
+    padding-right: 15px;
 }
 
 
@@ -125,6 +126,12 @@ header, .s-Label{
     border-radius: 5px;
     background-color: black;
     color: #f26135;
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+#Voice:hover, #Language:hover, #Speak:hover, #Reverse:hover, #Reset:hover {
+    opacity: 1;
 }
 
 
@@ -134,7 +141,11 @@ header, .s-Label{
     color: #f26135;
     background-color: black;
     border-radius: 5px;
+    opacity: 0.85;
+    cursor: pointer;
 }
+
+
 
 
 /*Shadows*/
