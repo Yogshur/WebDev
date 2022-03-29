@@ -1,10 +1,10 @@
 function resetTextArea() {
-    document.getElementById("mainBox").value='';
+    document.getElementById('mainBox').value='';
 }
 
 function reverseOrder() {
-    let text = document.getElementById("mainBox").value;
+    let text = document.getElementById('mainBox').value;
+    text = text.split(' ').reverse().join(' ');
 
-    document.getElementById("mainBox").innerHTML = text.split(' ').reverse().join(' ');
-    console.log(text);
+    document.getElementById('mainBox').value = text;
 }
