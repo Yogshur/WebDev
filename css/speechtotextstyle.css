@@ -6,7 +6,7 @@ body {
     background-image: url("D:/VS Code/Website for final/web_dev_final_Jake_and_Copeland/img/diego-ph-5LOhydOtTKU-unsplash.jpg");
     */
     /*Jake's Desktop*/
-    background-image: url("C:/Users/Jake Watt/OneDrive/One Drive/OneDrive - Wentworth Institute of Technology/Documents/webdev/web_dev_final_Jake_and_Copeland/img/Speech_to_text.jpg");
+    background-image: url("C:/Users/Jake Watt/OneDrive/One Drive/OneDrive - Wentworth Institute of Technology/Documents/webdev/web_dev_final_Jake_and_Copeland/img/diego-ph-5LOhydOtTKU-unsplash.jpg");
     
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -14,5 +14,70 @@ body {
 
 header  {
     text-align: center;
-    color: rgb(0, 247, 255) ;
+    font-style: bold;
+    font-size: 50px;
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 208, 0) ;
+    text-shadow: 10px 10px #00026d;
 }
+.textbtn {
+    text-align: center;
+    font-size: 30px;
+    font-style: oblique;
+    color:rgb(0, 255, 0)
+}
+.timer  {
+    margin-left: 50px;
+    margin-top: 50px;
+    color: #15ff00;
+    font-size: 25px;
+    text-shadow: 2px 2px #ca6e05;
+}
+.speechoutput   {
+    float: left;
+    display: grid;
+    grid-template-columns: 100ex;
+    padding: 50px;
+    color:azure
+}
+.startbtn   {
+    margin-top: 50px;
+    padding: 5px;
+    color: rgb(0, 64, 119);
+    font-size: 25px;
+}
+.stopbtn    {
+    margin-top: 50px;
+    display: grid;
+    padding: 5px;
+    color: rgb(255, 0, 0);
+    font-size: 25px;
+}
+.option {
+    margin-top: 50px;
+    float: middle;
+    display: grid;
+    padding: 5px;
+    color: black;
+    font-size: 25px;
+}
+.order  {
+    margin-top: 50px;
+    float: middle;
+    display: grid;
+    padding: 5px;
+    color: black;
+    font-size: 25px;
+}
+.project    {
+    margin-top: 75px;
+    float: right;
+    display: grid;
+    text-decoration:underline;
+    text-shadow: 2px 2px #ca6e05;
+    font-style: bold;
+    font-size: 25px;
+
+}
+
