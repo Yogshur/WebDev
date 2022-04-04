@@ -3,6 +3,16 @@
     src: url("D:/VS Code/WebDev Website for final/web_dev_final_Jake_and_Copeland/fonts/OpenDyslexicMono-Regular.otf");
 }
 
+@font-face {
+    font-family: 'GreatVibesCursive';
+    src: url("D:/VS Code/WebDev Website for final/web_dev_final_Jake_and_Copeland/fonts/GreatVibes-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'OsakaSansSerif';
+    src: url("D:/VS Code/WebDev Website for final/web_dev_final_Jake_and_Copeland/fonts/osaka-re.ttf");
+}
+
 body {
     /*Copeland's Laptop
     background-image: url("/Users/Copeland/Documents/VS Code/Web Dev project/web_dev_final_Jake_and_Copeland/img/diego-ph-5LOhydOtTKU-unsplash.jpg");
@@ -44,8 +54,7 @@ header, .s-Label{
     display: grid;
     grid-template-columns:repeat(2, 1fr);
     color: #f26135;
-    padding: 15px;
-
+    padding: 5px;
 }
 
 .selecter {
@@ -66,7 +75,6 @@ header, .s-Label{
 .actions {
     display: grid;
     grid-template-columns:repeat(3, 1fr);
-    
 }
 
 
@@ -114,17 +122,21 @@ header, .s-Label{
 
 /*Text Area*/
 #mainBox {
+    height: 100%;
+    width: 100%;
     border-radius: 30px;
-    padding-top: 12px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-top: 3.5%;
+    padding-left: 3.5%;
+    padding-right: 3%;
+    font-weight: bold;
+    font-size: 1.5em;
 }
 
 
 /*Selectors*/
 #Font, #Language {
-    margin-top: 25%;
-    margin-bottom: 25%;
+    margin-top: 27%;
+    margin-bottom: 35%;
     margin-left: 0px;
     margin-right: 0px;
     text-align: center;
