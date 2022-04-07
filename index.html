@@ -11,26 +11,14 @@
         <div class="container">
             <header>
                 <h1 class="BIG">Speakify</h1>
-                <input type="radio" class="pageSelector" name="mainSelector" value="1" checked>Text to Speech
-                <input type="radio" class="pageSelector" name="mainSelector" value="2">Speech to text
+                <input id="rd1" type="radio" class="pageSelector" name="mainSelector" value="1" checked>Text to Speech
+                <input id="rd2" type="radio" class="pageSelector" name="mainSelector" value="2">Speech to text
             </header>
 
             <div class="userInput">
                 <textarea id="mainBox" name="mainBox" rows="25" cols="20" placeholder="Enter your text here"></textarea>
                 
                 <div class="selecter">
-
-                    <div class="s-Label">
-                        <label for="Language">Language Selector:</label>
-                    </div>
-
-                    <select name="Language" id="Language">
-                        <option value="English">English</option>
-                        <option value="Spanish">Spanish</option>
-                        <option value="French">French</option>
-                    </select>
-                    
-
 
                     <div class="s-Label">
                         <label for="Font">Font Selector:</label>
@@ -52,7 +40,16 @@
                         <input type="range" id="SpeechRate" class="slider" name="SpeechRate" min="0" max="2" step=".5" value="1">
                         <p class="speechRateValue">Rate: <span id="valueSpeech"></span></p>
                     </div>
-                    
+
+
+                    <div class="s-Label">
+                        <label for="voicePitch">Voice Pitch:</label>
+                    </div>
+
+                    <div class="sliderContainer">
+                        <input type="range" id="voicePitch" class="slider" name="voicePitch" min="0" max="2" step=".25" value="1">
+                        <p class="voicePitchValue">Pitch: <span id="valuePitch"></span></p>
+                    </div>
                     
                     
                     <div class="s-Label">

@@ -7,6 +7,7 @@ const Reset = document.getElementById('Reset');
 const textInput = document.getElementById('mainBox');
 const speedInput = document.getElementById('SpeechRate');
 const volumeInput = document.getElementById('Volume');
+const pitchInput = document.getElementById('voicePitch');
 
 Speakify.addEventListener('click', () => {
     playText(textInput.value);
@@ -24,6 +25,7 @@ function playText(text) {
     const talk = new SpeechSynthesisUtterance(text);
     talk.rate = speedInput.value;
     talk.volume = volumeInput.value*.01;
+    talk.pitch = pitchInput.value;
     talk.addEventListener('end', () => {
         textInput.disabled = false;
     });
@@ -66,5 +68,26 @@ fontSelector.addEventListener("change", function () {
     } else {
         textBox.style.fontFamily = '';
         textBox.style.fontSize = ''
+    }
+});
+
+
+//Page Selector
+const radioOne = document.getElementById('rd1');
+const radioTwo = document.getElementById('rd2');
+
+radioOne.addEventListener("click", function(){
+    if(radioOne.checked == true){
+        location.href = "./index.html";
+    } else if (radioTwo.checked == true){
+        location.href = "./speechtotext.html";
+    }
+});
+
+radioTwo.addEventListener("click", function(){
+    if(radioOne.checked == true){
+        location.href = "./index.html";
+    } else if (radioTwo.checked == true){
+        location.href = "./speechtotext.html";
     }
 });
