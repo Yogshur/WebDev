@@ -41,3 +41,30 @@ function reverseOrder() {
 
     document.getElementById('mainBox').value = text;
 }
+
+//Selector Elements
+const textBox = document.getElementById('mainBox');
+const fontSelector = document.getElementById('Font');
+const languageSelector = document.getElementById('Language');
+
+
+fontSelector.addEventListener("change", function () {
+    let selected = fontSelector.value;
+
+    if (selected == 'Times') {
+        textBox.style.fontFamily = 'Times New Roman';
+        textBox.style.fontSize = '1.25em'
+    } else if (selected == 'OpenD') {
+        textBox.style.fontFamily = 'OpenDyslexic';
+        textBox.style.fontSize = '.8em'
+    } else if (selected == 'Cursive') {
+        textBox.style.fontFamily = 'GreatVibesCursive';
+        textBox.style.fontSize = '1.16em'
+    } else if (selected == 'OsakaSansSerif') {
+        textBox.style.fontFamily = 'OsakaSansSerif';
+        textBox.style.fontSize = '1.27em'
+    } else {
+        textBox.style.fontFamily = '';
+        textBox.style.fontSize = ''
+    }
+});
