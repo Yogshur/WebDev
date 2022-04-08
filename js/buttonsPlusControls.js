@@ -47,7 +47,6 @@ function reverseOrder() {
 //Selector Elements
 const textBox = document.getElementById('mainBox');
 const fontSelector = document.getElementById('Font');
-const languageSelector = document.getElementById('Language');
 
 
 fontSelector.addEventListener("change", function () {
