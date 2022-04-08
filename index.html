@@ -4,14 +4,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Speakify</title>
         <link rel="stylesheet" href="css/style.css">
-        <script src="js/javascript.js"></script>
+        <script src="js/buttonsPlusControls.js" defer></script>
+        <script src="js/slider.js"></script>
     </head>
     <body>
         <div class="container">
             <header>
                 <h1 class="BIG">Speakify</h1>
-                <input type="radio" name="mainSelector" value="1" checked>Text to Speech
-                <input type="radio" name="mainSelector" value="2">Speech to text
+                <input id="rd1" type="radio" class="pageSelector" name="mainSelector" value="1" checked>Text to Speech
+                <input id="rd2" type="radio" class="pageSelector" name="mainSelector" value="2">Speech to text
             </header>
 
             <div class="userInput">
@@ -20,36 +21,34 @@
                 <div class="selecter">
 
                     <div class="s-Label">
-                        <label for="Language">Language Selector:</label>
+                        <label for="Font">Font Selector:</label>
                     </div>
 
-                    <select name="Language" id="Language">
-                        <option value="English">English</option>
-                        <option value="Spanish">Spanish</option>
-                        <option value="French">French</option>
-                    </select>
-                    
-
-
-                    <div class="s-Label">
-                        <label for="Voice">Voice Selector:</label>
-                    </div>
-
-                    <select name="Voice" id="Voice">
-                        <option value="Voice1">Voice1</option>
-                        <option value="Voice2">Voice2</option>
-                        <option value="Voice3">Voice3</option>
+                    <select name="Font" id="Font">
+                        <option value="defualt">Defualt</option>
+                        <option value="Times">Times New Roman</option>
+                        <option value="OpenD">Open Dyslexic</option>
+                        <option value="Cursive">Cursive</option>
+                        <option value="OsakaSansSerif">Osaka Sans Serif</option>
                     </select>
 
                     <div class="s-Label">
                         <label for="SpeechRate">Playback Speed:</label>
                     </div>
 
-                    <div>
-                        <input type="range" id="SpeechRate" name="SpeechRate" min="0" max="2" step=".2" value="1">
-                        <div class="slidder">
-                            <div class="slidderButton"></div>
-                        </div>
+                    <div class="sliderContainer">
+                        <input type="range" id="SpeechRate" class="slider" name="SpeechRate" min="0" max="2" step=".5" value="1">
+                        <p class="speechRateValue">Rate: <span id="valueSpeech"></span></p>
+                    </div>
+
+
+                    <div class="s-Label">
+                        <label for="voicePitch">Voice Pitch:</label>
+                    </div>
+
+                    <div class="sliderContainer">
+                        <input type="range" id="voicePitch" class="slider" name="voicePitch" min="0" max="2" step=".25" value="1">
+                        <p class="voicePitchValue">Pitch: <span id="valuePitch"></span></p>
                     </div>
                     
                     
@@ -57,7 +56,10 @@
                         <label for="Volume">Volume:</label>
                     </div>
                     
-                    <input type="range" id="Volume" name="Volume" min="0" max="100" step="1" value="50">
+                    <div class="sliderContainer">
+                        <input type="range" id="Volume" class="slider" name="Volume" min="0" max="100" step="1" value="50">
+                        <p class="volumeLevelValue">Volume: <span id="valueVolume"></span></p>
+                    </div>
                 </div>
             
             
