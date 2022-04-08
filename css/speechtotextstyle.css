@@ -6,13 +6,114 @@ body {
     background-image: url("D:/VS Code/Website for final/web_dev_final_Jake_and_Copeland/img/diego-ph-5LOhydOtTKU-unsplash.jpg");
     */
     /*Jake's Desktop*/
-    background-image: url("C:/Users/Jake Watt/OneDrive/One Drive/OneDrive - Wentworth Institute of Technology/Documents/webdev/web_dev_final_Jake_and_Copeland/img/Speech_to_text.jpg");
+    background-image: url("C:/Users/Jake Watt/OneDrive/One Drive/OneDrive - Wentworth Institute of Technology/Documents/webdev/web_dev_final_Jake_and_Copeland/img/diego-ph-5LOhydOtTKU-unsplash.jpg");
     
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
-
 header  {
     text-align: center;
-    color: rgb(0, 247, 255) ;
+    font-style: bold;
+    font-size: 50px;
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 208, 0) ;
+    text-shadow: 10px 10px #00026d;
 }
+
+.container {
+    max-width: 840px;
+    margin: 0 auto;
+    position: relative;
+}
+.textbtn {
+    text-align: center;
+    font-size: 30px;
+    font-style: oblique;
+    color:rgb(0, 255, 0)
+}
+.timer  {
+    margin-left: 50px;
+    margin-top: 50px;
+    color: #15ff00;
+    font-size: 25px;
+    text-shadow: 2px 2px #ca6e05;
+}
+button {
+    padding:10px;
+    background-color:#6a67ce;
+    color: #FFFFFF;
+    border: 0px;
+    cursor:pointer;
+    border-radius: 5px;
+}
+#output {
+    margin-top:20px;
+    line-height:30px;
+}
+.hide {
+    display: none;
+}
+.show {
+    display:block;
+}
+.timer  {
+    animation-iteration-count: infinite;
+}
+.startbtn   {
+    margin-top: 50px;
+    padding: 5px;
+    color: rgb(0, 64, 119);
+    font-size: 25px;
+}
+.stopbtn    {
+    margin-top: 50px;
+    display: grid;
+    padding: 5px;
+    color: rgb(255, 0, 0);
+    font-size: 25px;
+}
+.option {
+    margin-top: 50px;
+    float: middle;
+    display: grid;
+    padding: 5px;
+    color: black;
+    font-size: 25px;
+}
+#reverse  {
+    margin-top: 50px;
+    float: middle;
+    display: grid;
+    padding: 5px;
+    color: black;
+    cursor:pointer;
+    font-size: 25px;
+}
+.project    {
+    margin-top: 75px;
+    float: right;
+    display: grid;
+    text-decoration:underline;
+    text-shadow: 2px 2px #ca6e05;
+    font-style: bold;
+    font-size: 25px;
+}
+#font   {
+    margin-top: 50px;
+    float: middle;
+    display: grid;
+    padding: 5px;
+    color: black;
+    font-size: 25px;
+}
+#size   {
+    margin-top: 50px;
+    float: middle;
+    display: grid;
+    padding: 5px;
+    color: black;
+    font-size: 25px;
+}
+
+
