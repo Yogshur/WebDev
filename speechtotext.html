@@ -3,60 +3,75 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speakify</title>
-    <link rel="stylesheet" href="css/speechtotextstyle.css">
-    <script src="js/speechtotext.js"></script>
-        </head>
-        <body>
-        <div class = "container">
+        <title>Speakify</title>
+        <link rel="stylesheet" href="css/speechtotextstyle.css">
+        <script src="js/speechtotext.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
             <header>
-    <h1>Speakify</h1>
-    </div>
-    <div class = "textbtn">
-    <input type="radio" name="mainSelector" value="1"checked>Text to Speech</input>
-    <input type="radio" name="mainSelector" value="2"checked>Speech to text</input>
-    </header>
-    </div>
-                <div class = "timer">
-                    00:00
+                <h1>Speakify</h1>
+                <div class="textbtn">
+                    <input type="radio" name="mainSelector" value="1" checked>Text to Speech</input>
+                    <input type="radio" name="mainSelector" value="2" checked>Speech to text</input>
+                </div>
+            </header>
+            <div class="userInput">
+                <textarea id="mainBox" name="mainBox" rows="25" cols="20" placeholder="Enter your text here"></textarea>
+                <div class="userInfo">
+                    <div>
+                        <!-- <p><button type="button" onclick="runSpeechRecognition()">Start Recording</button> &nbsp; <span id="action"></span></p> -->
+                        <input type="button" id="runSpeech" value="Start Recording">
+                        <p><span id="action"></span></p>
                     </div>
-                     <br>
+                    <div class="timer">00:00</div>
+                    <div>
+                        <p class="confidence">Confidence Level:</p>
+                    </div>
+                    <div>
+                        <p><span id="confidenceValue"></span>%</p>
+                    </div>
+                    <div class="I-Label">
+                        <label for="font">Choose Your Font:</label>
+                    </div>
+                    <div>
+                        <select name="font" id="font">
+                            <option value="Default">Default</option>
+                            <option value="TimesNewRoman">Times New Roman</option>
+                            <option value="Calibri">Calibri</option>
+                            <option value="Arial">Arial</option>
+                        </select>
+                    </div>
 
-                     <p>Click on the button below and start speaking something...</p>
-                     <p><button type="button" onclick="runSpeechRecognition()">Start Recording</button> &nbsp; <span id="action"></span></p>
-                      <div id = "output" class="hide" style= "border: 10px solid rgb(255, 153, 0); height: 300px; border-radius: 20px;"></div>
+                    <div class="I-Label">
+                        <label for="size">Choose Your Font Size:</label>
+                    </div>
 
-                      <p>Choose your order of input</p>
-                    <button type = button onclick="reverseOrder()" id="reverse" value="reverseOrder">Reverse Order</button>
-
-                    <p>Choose your font</p>
-                    <select name="font" id="font">
-                        <option value = "Default">Default</option>
-                        <option value = "TimesNewRoman">Times New Roman</option>
-                        <option value = "Calibri">Calibri</option>
-                        <option value = "Arial">Arial</option>
-                    </select>
-
-                    <p>Choose your font font-size</p>
-                    <select name="size" id="size">
-                        <option value = "Default">Default</option>
-                        <option value = "4">4</option>
-                        <option value = "8">8</option>
-                        <option value = "12">12</option>
-                        <option value = "16">16</option>
-                        <option value = "20">20</option>
-                        <option value = "24">24</option>
-                        <option value = "28">28</option>
-                        <option value = "32">32</option>
-                        <option value = "36">36</option>
-                    </select>
-<footer>
-    <p>
-        <div class="project">Project Information
-    <br>
+                    <div>
+                        <select name="size" id="size">
+                            <option value="Default">Default</option>
+                            <option value="4">4</option>
+                            <option value="8">8</option>
+                            <option value="12">12</option>
+                            <option value="16">16</option>
+                            <option value="20">20</option>
+                            <option value="24">24</option>
+                            <option value="28">28</option>
+                            <option value="32">32</option>
+                            <option value="36">36</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <input type="button" id="reverse" value="Reverse Order">
+            <footer>
+                <p>
+                <div class="project">Project Information
+                    <br>
                     Creators: Copeland Peacock & Jake Watt
-                    </div>
-    </p>
-</footer>
-</body>
+                </div>
+                </p>
+            </footer>
+        </div>
+    </body>
 </html>

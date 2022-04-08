@@ -1,9 +1,18 @@
+const inputBox = document.getElementById('mainBox');
+const confidenceVal = document.getElementById('confidenceValue');
+
+const reverse = document.getElementById('reverse');
+const speech = document.getElementById('runSpeech');
+
+const timer = document.getElementById('timer')
+
+speech.addEventListener('click', () => {
+    runSpeechRecognition();
+});
+
+
 //Speech-to-text Function
 function runSpeechRecognition() {
-    // get output div reference
-    var output = document.getElementById("output");
-    // get action element reference
-    var action = document.getElementById("action");
     // new speech recognition object
     var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
     var recognition = new SpeechRecognition();
@@ -22,8 +31,8 @@ function runSpeechRecognition() {
         recognition.onresult = function(event) {
         var transcript = event.results[0][0].transcript;
         var confidence = event.results[0][0].confidence;
-        output.innerHTML = `<p>Text: ${transcript} Confidence: ${confidence * 100}%</p>`;
-        output.classList.remove("hide");
+        inputBox.value = `${transcript}`;
+        confidenceVal.innerHTML = `${confidence * 100}`;
     };
   
      // start recognition
@@ -34,12 +43,12 @@ var hours =0;
 var mins =0;
 var seconds =0;
 
-$('#button').click(function(){
-      startTimer();
+/*timer.addEventListener('click', () => {
+    runtimer();
 });
-
+*/
 function startTimer(){
-  timex = setTimeout(function(){
+  timer = setTimeout(function(){
       seconds++;
     if(seconds >59){seconds=0;mins++;
        if(mins>59) {
@@ -61,18 +70,15 @@ function startTimer(){
   },1000);
 }
 //Order of Operations
-    const reverse = document.getElementById('reverse');
-    const textInput = document.getElementById('output');
+let text = inputBox.value;
 reverse.addEventListener('click', () => {
     reverseOrder();
 });
-    function reverseOrder() {
-    let text = textInput.value;
-    text = text.split(' ').reverse().join('');
-
-    document.getElementById('output').value = text;
+function reverseOrder() {
+    let text = inputBox.value;
+    text = text.split(' ').reverse().join(' ');
+    document.getElementById('mainBox').value = text;
 }
-const textBox = document.getElementById('output');
 //Fonts
 const fontSelector = document.getElementById('font');
 fontSelector.addEventListener("change", function () {
