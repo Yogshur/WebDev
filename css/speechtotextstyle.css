@@ -11,7 +11,6 @@ body {
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
-
 header  {
     text-align: center;
     font-style: bold;
@@ -20,6 +19,12 @@ header  {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(255, 208, 0) ;
     text-shadow: 10px 10px #00026d;
+}
+
+.container {
+    max-width: 840px;
+    margin: 0 auto;
+    position: relative;
 }
 .textbtn {
     text-align: center;
@@ -34,12 +39,26 @@ header  {
     font-size: 25px;
     text-shadow: 2px 2px #ca6e05;
 }
-.speechoutput   {
-    float: left;
-    display: grid;
-    grid-template-columns: 100ex;
-    padding: 50px;
-    color:azure
+button {
+    padding:10px;
+    background-color:#6a67ce;
+    color: #FFFFFF;
+    border: 0px;
+    cursor:pointer;
+    border-radius: 5px;
+}
+#output {
+    margin-top:20px;
+    line-height:30px;
+}
+.hide {
+    display: none;
+}
+.show {
+    display:block;
+}
+.timer  {
+    animation-iteration-count: infinite;
 }
 .startbtn   {
     margin-top: 50px;
@@ -62,12 +81,13 @@ header  {
     color: black;
     font-size: 25px;
 }
-.order  {
+#reverse  {
     margin-top: 50px;
     float: middle;
     display: grid;
     padding: 5px;
     color: black;
+    cursor:pointer;
     font-size: 25px;
 }
 .project    {
@@ -78,6 +98,22 @@ header  {
     text-shadow: 2px 2px #ca6e05;
     font-style: bold;
     font-size: 25px;
-
 }
+#font   {
+    margin-top: 50px;
+    float: middle;
+    display: grid;
+    padding: 5px;
+    color: black;
+    font-size: 25px;
+}
+#size   {
+    margin-top: 50px;
+    float: middle;
+    display: grid;
+    padding: 5px;
+    color: black;
+    font-size: 25px;
+}
+
 
