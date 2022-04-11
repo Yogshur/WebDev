@@ -1,28 +1,32 @@
 @font-face {
     font-family: 'OpenDyslexic';
-    src: url("D:/VS Code/WebDev Website for final/web_dev_final_Jake_and_Copeland/fonts/OpenDyslexicMono-Regular.otf");
+    src: url("var/www/html/fonts/OpenDyslexicMono-Regular.otf");
 }
 
 @font-face {
     font-family: 'GreatVibesCursive';
-    src: url("D:/VS Code/WebDev Website for final/web_dev_final_Jake_and_Copeland/fonts/GreatVibes-Regular.ttf");
+    src: url("var/www/html/fonts/GreatVibes-Regular.ttf");
 }
 
 @font-face {
     font-family: 'OsakaSansSerif';
-    src: url("D:/VS Code/WebDev Website for final/web_dev_final_Jake_and_Copeland/fonts/osaka-re.ttf");
+    src: url("var/www/html/fonts/osaka-re.ttf");
 }
 
 body {
     /*Copeland's Laptop
     background-image: url("/Users/Copeland/Documents/VS Code/Web Dev project/web_dev_final_Jake_and_Copeland/img/diego-ph-5LOhydOtTKU-unsplash.jpg");
     
-    /*Copeland's Desktop*/
+    /*Copeland's Desktop
     background-image: url("D:/VS Code/WebDev Website for final/web_dev_final_Jake_and_Copeland/img/diego-ph-5LOhydOtTKU-unsplash.jpg");
-    
+    */
     /*Jake's Desktop
     background-image: url("C:/Users/Jake Watt/OneDrive/One Drive/OneDrive - Wentworth Institute of Technology/Documents/webdev/web_dev_final_Jake_and_Copeland/img/diego-ph-5LOhydOtTKU-unsplash.jpg");
     */
+
+    /*Rasberry Pi Desktop*/
+    background-image: url("var/www/html/img/diego-ph-5LOhydOtTKU-unsplash.jpg");
+    
 
     background-size: 100% 100%;
     background-repeat: no-repeat;
