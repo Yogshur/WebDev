@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'OpenDyslexic';
-    src: url("fonts/OpenDyslexicMono-Regular.otf");
+    src: url("/fonts/OpenDyslexicMono-Regular.otf");
 }
 
 @font-face {
     font-family: 'GreatVibesCursive';
-    src: url("fonts/GreatVibes-Regular.ttf");
+    src: url("/fonts/GreatVibes-Regular.ttf");
 }
 
 @font-face {
     font-family: 'OsakaSansSerif';
-    src: url("fonts/osaka-re.ttf");
+    src: url("/fonts/osaka-re.ttf");
 }
 
 body {
@@ -25,7 +25,7 @@ body {
     */
 
     /*Rasberry Pi Desktop*/
-    background-image: url("img/diego-ph-5LOhydOtTKU-unsplash.jpg");
+    background-image: url("/img/diego-ph-5LOhydOtTKU-unsplash.jpg");
     
 
     background-size: 100% 100%;
