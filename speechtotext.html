@@ -12,8 +12,8 @@
             <header>
                 <h1>Speakify</h1>
                 <div class="textbtn">
-                    <input type="radio" name="mainSelector" value="1" checked>Text to Speech</input>
-                    <input type="radio" name="mainSelector" value="2" checked>Speech to text</input>
+                    <input id = "rd1" type="radio" name="mainSelector" value="1" checked>Text to Speech</input>
+                    <input id = "rd2" type="radio" name="mainSelector" value="2" checked>Speech to text</input>
                 </div>
             </header>
             <div class="userInput">
@@ -24,7 +24,7 @@
                         <input type="button" id="runSpeech" value="Start Recording">
                         <p><span id="action"></span></p>
                     </div>
-                    <div class="timer">00:00</div>
+                    <div class="stopwatch"><span id="stopwatch">00:00</span></div>
                     <div>
                         <p class="confidence">Confidence Level:</p>
                     </div>
@@ -64,6 +64,7 @@
                 </div>
             </div>
             <input type="button" id="reverse" value="Reverse Order">
+            <input type="button" id="reset" value="Reset Order">
             <footer>
                 <p>
                 <div class="project">Project Information

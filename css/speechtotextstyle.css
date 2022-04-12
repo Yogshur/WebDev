@@ -37,13 +37,22 @@ header  {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
 }
+#mainBox    {
+    margin-top: 50px;
+}
 .textbtn {
     text-align: center;
     font-size: 30px;
     font-style: oblique;
-    color:rgb(0, 255, 0)
 }
-.timer  {
+#runspeech  {
+    margin-left: 50px;
+}
+#action {
+    margin-left: 50px;
+}
+.stopwatch  {
+    animation-iteration-count: infinite;
     margin-left: 50px;
     margin-top: 50px;
     color: #15ff00;
@@ -52,51 +61,48 @@ header  {
 }
 
 input[type="button"] {
-    padding:10px;
+    margin-left: 50px;
+    margin-top: 50px;
+    padding: 10px;
     background-color:#6a67ce;
+    border: 10px;
     color: #FFFFFF;
-    border: 0px;
     cursor:pointer;
-    border-radius: 5px;
 }
-
-#output {
-    margin-top:20px;
-    line-height:30px;
+.confidence {
+    margin-left: 50px;
+    color:#0004ff;
 }
-.hide {
-    display: none;
+#confidenceValue    {
+    margin-left: 50px;
 }
-.show {
-    display:block;
+.I-Label    {
+    margin-left: 50px;
+    color:#0004ff;
 }
-.timer  {
-    animation-iteration-count: infinite;
-}
-.startbtn   {
-    margin-top: 50px;
-    padding: 5px;
-    color: rgb(0, 64, 119);
-    font-size: 25px;
-}
-.stopbtn    {
-    margin-top: 50px;
-    padding: 5px;
-    color: rgb(255, 0, 0);
-    font-size: 25px;
-}
-.option {
-    margin-top: 50px;
+#font   {
+    margin-left: 50px;
     float: middle;
-    padding: 5px;
     color: black;
     font-size: 25px;
 }
 
+#size   {
+    margin-left: 50px;
+    float: middle;
+    color: black;
+    font-size: 25px;
+}
 #reverse  {
     margin-top: 50px;
-    float: middle;
-    padding: 5px;
+    margin-left: 10px;
+    color: black;
+    cursor:pointer;
+    font-size: 25px;
+}
+#reset  {
+    margin-top: 50px;
+    margin-left: 25px;
     color: black;
     cursor:pointer;
     font-size: 25px;
@@ -110,19 +116,4 @@ input[type="button"] {
     font-style: bold;
     font-size: 25px;
 }
-#font   {
-    margin-top: 50px;
-    float: middle;
-    padding: 5px;
-    color: black;
-    font-size: 25px;
-}
-#size   {
-    margin-top: 50px;
-    float: middle;
-    padding: 5px;
-    color: black;
-    font-size: 25px;
-}
-
 

@@ -2,21 +2,23 @@ const inputBox = document.getElementById('mainBox');
 const confidenceVal = document.getElementById('confidenceValue');
 
 const reverse = document.getElementById('reverse');
-const speech = document.getElementById('runSpeech');
+const reset = document.getElementById('reset');
 
-const timer = document.getElementById('timer')
+const speech = document.getElementById('runSpeech');
+const timer = document.getElementById('stopwatch')
 
 speech.addEventListener('click', () => {
     runSpeechRecognition();
 });
-
+stopwatch.addEventListener('click', () =>  {
+    runtimerCycle();
+});
 
 //Speech-to-text Function
 function runSpeechRecognition() {
     // new speech recognition object
     var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
     var recognition = new SpeechRecognition();
-
     // This runs when the speech recognition service starts
     recognition.onstart = function() {
         action.innerHTML = "<small>listening, please speak...</small>";
@@ -39,35 +41,34 @@ function runSpeechRecognition() {
      recognition.start();
 }
 //Timer
-var hours =0;
-var mins =0;
-var seconds =0;
+var mins = 0;
+var seconds = 0;
+var stoptime = true;
 
-/*timer.addEventListener('click', () => {
-    runtimer();
-});
-*/
-function startTimer(){
-  timer = setTimeout(function(){
-      seconds++;
-    if(seconds >59){seconds=0;mins++;
-       if(mins>59) {
-       mins=0;hours++;
-         if(hours <10) {$("#hours").text('0'+hours+':')} else $("#hours").text(hours+':');
-        }
-                       
-    if(mins<10){                     
-      $("#mins").text('0'+mins+':');}       
-       else $("#mins").text(mins+':');
-                   }    
-    if(seconds <10) {
-      $("#seconds").text('0'+seconds);} else {
-      $("#seconds").text(seconds);
-      }
-     
+function timerCycle() {
+    if (stoptime == false) {
+    sec = parseInt(sec);
+    mins = parseInt(mins);
     
-      startTimer();
-  },1000);
+    sec = sec + 1;
+    
+    if (sec == 60) {
+    mins = mins + 1;
+    sec = 0;
+    }
+    if (mins == 60) {
+    mins = 0;
+    sec = 0;
+    }
+    
+    if (sec < 10 || sec == 0) {
+    sec = '0' + sec;
+    }
+    if (min < 10 || mins == 0) {
+    mins = '0' + mins;
+    }
+    timer.innerHTML = min + ':' + sec;
+    }
 }
 //Order of Operations
 let text = inputBox.value;
@@ -79,50 +80,74 @@ function reverseOrder() {
     text = text.split(' ').reverse().join(' ');
     document.getElementById('mainBox').value = text;
 }
+reset.addEventListener('click', () => {
+    resetOrder();
+});
+function resetOrder() {
+    inputBox.value = '';
+}
 //Fonts
 const fontSelector = document.getElementById('font');
 fontSelector.addEventListener("change", function () {
     let selected = fontSelector.value;
 
     if (selected == 'Times') {
-        textBox.style.fontFamily = 'Times New Roman';
+        inputBox.style.fontFamily = 'Times New Roman';
     }else if (selected == 'Calibri')   {
-        textBox.style.fontFamily = 'Calibri';
+        inputBox.style.fontFamily = 'Calibri';
     }else if (selected == 'Arial')   {
-        textBox.style.fontFamily = 'Arial';
+        inputBox.style.fontFamily = 'Arial';
     }else   {
-        textBox.style.fontFamily = '';
+        inputBox.style.fontFamily = '';
     }
 });
 //Font size
 const fontSize = document.getElementById('size');
 fontSize.addEventListener("change", function () {
-    let selected = fontSelector.value;
+    let selected = fontSize.value;
     if (selected == '4')    {
-        textBox.style.fontSize = '4';
+        inputBox.style.fontSize = '4px';
     }
     if (selected == '8')    {
-        textBox.style.fontSize = '8';
+        inputBox.style.fontSize = '8px';
     }
     if (selected == '12')    {
-        textBox.style.fontSize = '12';
+        inputBox.style.fontSize = '12px';
     }
     if (selected == '16')    {
-        textBox.style.fontSize = '16';
+        inputBox.style.fontSize = '16px';
     }
     if (selected == '20')    {
-        textBox.style.fontSize = '20';
+        inputBox.style.fontSize = '20px';
     }
     if (selected == '24')    {
-        textBox.style.fontSize = '24';
+        inputBox.style.fontSize = '24px';
     }
     if (selected == '28')    {
-        textBox.style.fontSize = '28';
+        inputBox.style.fontSize = '28px';
     }
     if (selected == '32')    {
-        textBox.style.fontSize = '32';
+        inputBox.style.fontSize = '32px';
     }
     if (selected == '36')    {
-        textBox.style.fontSize = '36';
+        inputBox.style.fontSize = '36px';
+    }
+});
+const radioOne = document.getElementById('rd1');
+const radioTwo = document.getElementById('rd2');
+
+radioOne.addEventListener("click", function(){
+    if(radioOne.checked == true){
+        location.href = "./index.html";
+    } else if (radioTwo.checked == true){
+        location.href = "./speechtotext.html";
+    }
+});
+
+radioTwo.addEventListener("click", function(){
+    if(radioOne.checked == true){
+        location.href = "./index.html";
+    } else if (radioTwo.checked == true){
+        location.href = "./speechtotext.html";
     }
 });
