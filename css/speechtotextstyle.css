@@ -18,7 +18,9 @@ header  {
     text-decoration: underline;
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(255, 208, 0) ;
-    text-shadow: 10px 10px #00026d;
+}
+h1  {
+    text-shadow: 10px 10px #011e6d;
 }
 
 /*Grid Layout*/
@@ -66,24 +68,25 @@ input[type="button"] {
     padding: 10px;
     background-color:#6a67ce;
     border: 10px;
-    color: #FFFFFF;
+    color: #ffffff;
     cursor:pointer;
 }
 .confidence {
     margin-left: 50px;
-    color:#0004ff;
+    color:#ffffff;
 }
-#confidenceValue    {
+#confidenceValue   {
     margin-left: 50px;
+    color: #ffffff;
 }
 .I-Label    {
     margin-left: 50px;
-    color:#0004ff;
+    color:#ffffff;
 }
 #font   {
     margin-left: 50px;
     float: middle;
-    color: black;
+    color: rgb(32, 25, 122);
     font-size: 25px;
 }
 
