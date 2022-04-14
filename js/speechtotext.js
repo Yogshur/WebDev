@@ -132,6 +132,7 @@ fontSize.addEventListener("change", function () {
         inputBox.style.fontSize = '36px';
     }
 });
+//Page Selector
 const radioOne = document.getElementById('rd1');
 const radioTwo = document.getElementById('rd2');
 
