@@ -7,12 +7,23 @@ const reset = document.getElementById('reset');
 const speech = document.getElementById('runSpeech');
 const timer = document.getElementById('stopwatch')
 
+var minutesLabel = document.getElementById("minutes");
+var secondsLabel = document.getElementById("seconds");
+var totalSeconds = 0;
+
+var test;
+var flag = 0;
+
 speech.addEventListener('click', () => {
+    minutesLabel.innerHTML = "00";
+    secondsLabel.innerHTML = "00";
     runSpeechRecognition();
 });
-stopwatch.addEventListener('click', () =>  {
-    runtimerCycle();
+
+speech.addEventListener('click', () => {
+    test = setInterval(setTime, 1000);
 });
+
 
 //Speech-to-text Function
 function runSpeechRecognition() {
@@ -35,40 +46,28 @@ function runSpeechRecognition() {
         var confidence = event.results[0][0].confidence;
         inputBox.value = `${transcript}`;
         confidenceVal.innerHTML = `${confidence * 100}`;
+        flag = 1;
     };
   
      // start recognition
      recognition.start();
+     
 }
 //Timer
-var mins = 0;
-var seconds = 0;
-var stoptime = true;
+function setTime() {
+  ++totalSeconds;
+  secondsLabel.innerHTML = pad(totalSeconds % 60);
+  minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+  stopTimer();
+}
 
-function timerCycle() {
-    if (stoptime == false) {
-    sec = parseInt(sec);
-    mins = parseInt(mins);
-    
-    sec = sec + 1;
-    
-    if (sec == 60) {
-    mins = mins + 1;
-    sec = 0;
-    }
-    if (mins == 60) {
-    mins = 0;
-    sec = 0;
-    }
-    
-    if (sec < 10 || sec == 0) {
-    sec = '0' + sec;
-    }
-    if (min < 10 || mins == 0) {
-    mins = '0' + mins;
-    }
-    timer.innerHTML = min + ':' + sec;
-    }
+function pad(val) {
+  var valString = val + "";
+  if (valString.length < 2) {
+    return "0" + valString;
+  } else {
+    return valString;
+  }
 }
 //Order of Operations
 let text = inputBox.value;
@@ -151,3 +150,10 @@ radioTwo.addEventListener("click", function(){
         location.href = "./speechtotext.html";
     }
 });
+function stopTimer (){
+    if(flag == 1){
+        clearInterval(test);
+        totalSeconds = 0;
+        flag = 0;
+    }
+}

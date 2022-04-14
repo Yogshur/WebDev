@@ -39,6 +39,10 @@ header  {
 }
 #mainBox    {
     margin-top: 50px;
+    border-radius: 30px;
+    padding-top: 3.5%;
+    padding-left: 3.5%;
+    padding-right: 3%;
 }
 .textbtn {
     text-align: center;
@@ -66,24 +70,25 @@ input[type="button"] {
     padding: 10px;
     background-color:#6a67ce;
     border: 10px;
-    color: #FFFFFF;
+    color: #ffffff;
     cursor:pointer;
 }
 .confidence {
     margin-left: 50px;
-    color:#0004ff;
+    color:#ffffff;
 }
-#confidenceValue    {
+#confidenceValue   {
     margin-left: 50px;
+    color: #ffffff;
 }
 .I-Label    {
     margin-left: 50px;
-    color:#0004ff;
+    color:#ffffff;
 }
 #font   {
     margin-left: 50px;
     float: middle;
-    color: black;
+    color: rgb(32, 25, 122);
     font-size: 25px;
 }
 
@@ -116,4 +121,3 @@ input[type="button"] {
     font-style: bold;
     font-size: 25px;
 }
-
